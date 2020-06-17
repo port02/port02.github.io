@@ -24,5 +24,5 @@ if (locationEntity.pathname === "/ads.txt") {
 } else if (locationEntity.href !== redirectURL) {
   console.log(4);
   // 현재주소와 리다이렉트 주소가 다를때 액션
-  location.href = redirectURL;
+  //location.href = redirectURL;
 }
