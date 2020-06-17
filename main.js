@@ -13,7 +13,10 @@ if (mainDomain === currentHOST) {
   redirectURL = httpProtocol + "blog." + mainDomain + locationEntity.pathname;
 }
 
-// 현재주소와 리다이렉트 주소가 다를때 액션
-if (locationEntity.href !== redirectURL) {
+// ads.txt 경로를 조회중이면 리다이렉트를 하지 않는다.
+if (locationEntity.pathname === "/ads.txt") {
+  return;
+} else if (locationEntity.href !== redirectURL) {
+  // 현재주소와 리다이렉트 주소가 다를때 액션
   location.href = redirectURL;
 }
