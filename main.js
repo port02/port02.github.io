@@ -1,4 +1,4 @@
-// 수야네로 들어온 주소에 대해서 blog.suyane24.com 로 리다이렉트 시켜주기
+// 수야네로 들1어온 주소에 대해서 blog.suyane24.com 로 리다이렉트 시켜주기
 
 const locationEntity = location;
 const mainDomain = "suyane24.com";
