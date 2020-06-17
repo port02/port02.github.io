@@ -9,14 +9,20 @@ let redirectURL = locationEntity.href;
 
 // 현재 호스트가 메인 호스트와 같다면 리다이렉트 시켜주기
 if (mainDomain === currentHOST) {
+  console.log(1);
   // 리다이렉트 주소로 변경해주기
   redirectURL = httpProtocol + "blog." + mainDomain + locationEntity.pathname;
+  console.log("redirectURL", redirectURL);
 }
+
+console.log(2);
 
 // ads.txt 경로를 조회중이면 리다이렉트를 하지 않는다.
 if (locationEntity.pathname === "/ads.txt") {
+  console.log(3);
   return;
 } else if (locationEntity.href !== redirectURL) {
+  console.log(4);
   // 현재주소와 리다이렉트 주소가 다를때 액션
   location.href = redirectURL;
 }
